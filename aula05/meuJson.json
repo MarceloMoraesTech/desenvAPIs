@@ -1,0 +1,14 @@
+{
+    "nome":"Marcelo",
+    "idade":35,
+    "altura":1.65,
+    "aluno":true,
+    "formaturas":[2012],
+    "cursos":["Graduação"],
+    "cnh":{"numero":123456, "categoria":"AB"},
+    "filhos":[
+        {"nome":"José","idade":10},
+        {"nome":"Julia","idade":14}
+    ],
+    "endereco": null
+}
