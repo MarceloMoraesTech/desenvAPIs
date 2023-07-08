@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
 
 //BUSCAR PRODUTOS PELO ID
 router.get('/:id', (req, res, next) => {
-    const id = req.params.id;
+    const id = req.params.id; //INCLUIR JOIN ANTES DO WHERE - FAZER RELAÇÃO ENTRE CHAVES DAS TABELAS
     knex('produtos').where('id', id).first().then((dados) => {
         if (!dados) {
             return res.status(400).send('Este produto não foi encontrado');
