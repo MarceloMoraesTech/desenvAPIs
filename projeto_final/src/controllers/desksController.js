@@ -18,17 +18,24 @@ const criarReserva = async (request, response) =>{
 };
 
 const deleteReserva = async (request, response) => {
-  const {reserva_id} = request.params.reserva_id;
+  const {id} = request.params;
   
-  await desksModel.deleteReserva(reserva_id);
+  await desksModel.deleteReserva(id);
 
   return response.status(204).json();
+};
 
+const updateReserva = async (request, response) => {
+  const { id } = request.params;
+
+  await desksModel.updateReserva(id, request.body);
+  return response.status(204).json();
 };
 
 module.exports = {
   getAll,
   getAllDesks,
   criarReserva,
-  deleteReserva
+  deleteReserva,
+  updateReserva
 };

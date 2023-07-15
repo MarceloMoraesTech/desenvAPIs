@@ -10,4 +10,7 @@ router.post('/estacoes_trabalho',deskscontroller.criarReserva);
 
 router.delete('/deletar/:id',deskscontroller.deleteReserva);
 
+router.put('/reservas/:id',deskscontroller.updateReserva);
+
+
 module.exports = router;
