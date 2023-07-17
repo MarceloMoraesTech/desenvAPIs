@@ -26,9 +26,6 @@ router.delete('/deletar/:id',deskscontroller.deleteReserva);
 
 router.put('/reservas/:id',deskscontroller.updateReserva);
 
-router.get('/', (req,res)=> {
-  res.send('<a href="/auth/google">Authenticate with Google</a>');
-});
 
 router.get('/auth/google', passport.authenticate('google',{scope: ['email','profile']})
 );

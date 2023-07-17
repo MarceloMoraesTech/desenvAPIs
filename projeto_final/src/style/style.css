@@ -1,0 +1,38 @@
+/* Estilo personalizado para o botão "Entrar com Google" */
+.google-login-button {
+    background-color: #fff;
+    color: #757575;
+    border: 1px solid #dadce0;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-login-button:hover {
+    background-color: #f8f9fa;
+}
+
+.google-login-button img {
+    margin-right: 8px;
+}
+
+.userPassword {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px; /* Adicione um espaçamento inferior entre os campos */
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(gray,blue);
+}

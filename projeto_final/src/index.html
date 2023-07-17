@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autenticação - Google Login </title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co-working Procergs</title>
+  <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-  <div id="buttonDiv"></div> 
-  <p id="fullName"></p>
-  <p id="sub"></p>
-  <p id="given_name"></p>
-  <p id="family_name"></p>
-  <p id="email"></p>
-  <img id="picture">
+  <div class="login">
+    <h1>Co-working Procergs</h1>
+    <div class="userPassword">
+      <label for="">Usuário</label>
+      <input type="text" name="" id="">
 
-  <script src="auth.js"></script>
+      <label for="">Senha</label>
+      <input type="text">
+    </div>
+
+    <button id='google-login' class="google-login-button">
+      <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" width="20" height="20">
+      Entrar com Google
+    </button>
+    
+  </div>
+     
+    
+  <script>
+    //redirecionar para a autenticação do Google
+    function signInWithGoogle() {
+      // Redirecionar para a rota de autenticação do Google no backend
+      window.location.href = "http://localhost:3333/auth/google";
+    }
+
+    // Adicionar um evento de clique ao botão
+    const googleLoginButton = document.getElementById("google-login");
+    googleLoginButton.addEventListener("click", signInWithGoogle);
+
+  </script>
+  
 </body>
-</html>
+</html> 
