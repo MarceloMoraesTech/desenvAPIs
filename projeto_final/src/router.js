@@ -33,7 +33,7 @@ router.get('/', (req,res)=> {
 router.get('/auth/google', passport.authenticate('google',{scope: ['email','profile']})
 );
 
-router.get('/google/callback', passport.authenticate('google', {successRedirect:'/protected', failureRedirect:'/auth/failure'}));
+router.get('/auth/google/callback', passport.authenticate('google', {successRedirect:'/protected', failureRedirect:'/auth/failure'}));
 
 router.get('/protected', isLoggedIn, (req,res)=>{
   res.send(`Hello ${req.user.displayName}`);
@@ -46,8 +46,8 @@ router.get('/logout',(req,res)=>{
   });
 });
 
-router.get('/auth/failure',(req,res)=>{
-  res.send('Something went wrong...');
+router.get('/auth/google/failure',(req,res)=>{
+  res.send('Failed to authenticate..');
 });
 
 
