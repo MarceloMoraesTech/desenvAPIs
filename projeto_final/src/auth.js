@@ -1,7 +1,11 @@
+const express = require('express');
 const passport = require('passport');
+const session = require('express-session');
 
 
 const GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
+
+
 
 const GOOGLE_CLIENT_ID = '1058824386616-tl4ng82j47ht348kl2s9pr1jb4nggop8.apps.googleusercontent.com';
 const GOOGLE_CLIENT_SECRET = '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';

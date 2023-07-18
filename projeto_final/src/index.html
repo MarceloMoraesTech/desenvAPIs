@@ -26,12 +26,10 @@
      
     
   <script>
-    //redirecionar para a autenticação do Google
     function signInWithGoogle() {
       // Redirecionar para a rota de autenticação do Google no backend
       window.location.href = "http://localhost:3333/auth/google";
     }
-
     // Adicionar um evento de clique ao botão
     const googleLoginButton = document.getElementById("google-login");
     googleLoginButton.addEventListener("click", signInWithGoogle);

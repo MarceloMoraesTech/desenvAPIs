@@ -3,6 +3,7 @@ const deskscontroller = require('./controllers/desksController');
 const passport = require('passport');
 const session = require('express-session');
 
+
 const router = express.Router();
 
 require('./auth');
@@ -30,10 +31,11 @@ router.put('/reservas/:id',deskscontroller.updateReserva);
 router.get('/auth/google', passport.authenticate('google',{scope: ['email','profile']})
 );
 
-router.get('/auth/google/callback', passport.authenticate('google', {successRedirect:'/protected', failureRedirect:'/auth/failure'}));
+router.get('/auth/google/callback', passport.authenticate('google', {successRedirect:'/reservas', failureRedirect:'/auth/failure'}));
 
-router.get('/protected', isLoggedIn, (req,res)=>{
+router.get('/protected', (req, res) => {
   res.send(`Hello ${req.user.displayName}`);
+  
 });
 
 router.get('/logout',(req,res)=>{

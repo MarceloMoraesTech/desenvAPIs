@@ -1,4 +1,4 @@
-const desksModel = require('../models/desksModel'); 
+const desksModel = require('../models/desksModel');
 
 const getAll = async (request, response) => {
   const reservas = await desksModel.getAll();
